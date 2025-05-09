@@ -1,0 +1,23 @@
+
+intents:
+  - greet
+  - book_ration
+  - check_status
+  - ask_documents
+  - goodbye
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you with your ration needs today?"
+  utter_book_ration:
+    - text: "You can book your ration through the portal or I can guide you step-by-step."
+  utter_check_status:
+    - text: "Please provide your ration booking ID to check the status."
+  utter_ask_documents:
+    - text: "You will need a valid Ration Card and an Aadhaar ID for verification."
+  utter_goodbye:
+    - text: "Goodbye! Stay safe and take care."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

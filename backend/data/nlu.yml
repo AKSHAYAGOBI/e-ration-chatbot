@@ -1,0 +1,34 @@
+
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+
+- intent: book_ration
+  examples: |
+    - I want to book ration
+    - help me book my ration
+    - book my ration
+
+- intent: check_status
+  examples: |
+    - check my booking status
+    - what is the status of my ration
+    - is my ration ready
+
+- intent: ask_documents
+  examples: |
+    - what documents are needed
+    - which proofs should I upload
+    - do I need an ID card
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later

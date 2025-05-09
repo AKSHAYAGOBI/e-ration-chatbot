@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Ration Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    #webchat {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to the E-Ration Portal</h1>
+  <p>Need help? Chat with our assistant below 👇</p>
+
+  <div id="webchat"></div>
+
+  <!-- RASA Webchat Script -->
+  <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.min.js"></script>
+  <script>
+    WebChat.default.init({
+      selector: "#webchat",
+      initPayload: "/greet",
+      customData: { language: "en" },
+      socketUrl: "http://localhost:5005",
+      title: "E-Ration Assistant",
+      subtitle: "Ask about ration booking, status, and documents",
+      profileAvatar: "https://cdn-icons-png.flaticon.com/512/4712/4712027.png",
+      showFullScreenButton: true,
+      params: {
+        storage: "session"
+      }
+    });
+  </script>
+
+</body>
+</html>
